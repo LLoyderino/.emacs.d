@@ -1,10 +1,14 @@
 # buffer files
 *~
+*.eld
+projects
+projectile.cache
 
 # cache folders
 elpa/*
 transient/*
 url/*
+tutorial/*
 
 # other files
 custom.el

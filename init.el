@@ -34,6 +34,10 @@
 ;; Load keybinds
 (require 'init-evil)
 
+;; Others
+(require 'init-projectile)
+(require 'init-magit)
+
 ;; custom.el
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file)

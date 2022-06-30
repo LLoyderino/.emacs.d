@@ -9,6 +9,7 @@
 
 ;; Line numbers
 (use-package linum-relative
-  :ensure t)
+  :ensure t
+  :init (linum-relative-mode))
 
 (provide 'init-theme)
