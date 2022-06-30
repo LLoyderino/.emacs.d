@@ -1,0 +1,10 @@
+# buffer files
+*~
+
+# cache folders
+elpa/*
+transient/*
+url/*
+
+# other files
+custom.el
