@@ -13,8 +13,11 @@
 (use-package nord-theme
   :config (load-theme 'nord t))
 
-;; Line numbers
-(use-package linum-relative
-  :init (linum-relative-mode))
+;; Relative line numbers
+(use-package linum-relative)
+(add-hook 'prog-mode-hook
+	  (if (and (fboundp 'display-lines-number-mode) (display-graphic-p))
+	      #'display-line-numbers-mode
+	    #'linum-relative-mode))
 
 (provide 'init-theme)
