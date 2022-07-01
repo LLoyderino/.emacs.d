@@ -1,6 +1,13 @@
+;; Utility to check if a font exists
+(defun font-exists-p (font)
+  "Check if the font exists"
+  (if (null (x-list-fonts font)) nil t))
+
 ;; Font
 ;; TODO implement non monospace fonts
-(set-frame-font "JetBrains Mono 11" nil t)
+
+(when (font-exists-p "JetBrains Mono")
+  (set-frame-font "JetBrains Mono 11" nil t))
 
 ;; Theme
 (use-package nord-theme

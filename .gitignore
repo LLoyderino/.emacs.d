@@ -1,5 +1,6 @@
 # buffer files
 *~
+*#
 *.eld
 projects
 projectile.cache
