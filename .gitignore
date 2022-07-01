@@ -10,6 +10,8 @@ elpa/*
 transient/*
 url/*
 tutorial/*
+eshell/*
+server/*
 
 # other files
 custom.el
