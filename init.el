@@ -18,6 +18,7 @@
   (package-install 'use-package))
 (eval-when-compile
   (require 'use-package))
+(setq use-package-always-ensure t)
 
 ;; Disable menus
 (tool-bar-mode -1)

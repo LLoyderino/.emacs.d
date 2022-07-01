@@ -1,5 +1,4 @@
 (use-package telephone-line
-  :ensure t
   :init
   (setq telephone-line-lhs
 	'((evil   . (telephone-line-evil-tag-segment))

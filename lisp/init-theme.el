@@ -4,12 +4,10 @@
 
 ;; Theme
 (use-package nord-theme
-  :ensure t
   :config (load-theme 'nord t))
 
 ;; Line numbers
 (use-package linum-relative
-  :ensure t
   :init (linum-relative-mode))
 
 (provide 'init-theme)

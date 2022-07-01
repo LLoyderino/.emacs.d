@@ -1,4 +1,3 @@
-(use-package magit
-  :ensure t)
+(use-package magit)
 
 (provide 'init-magit)

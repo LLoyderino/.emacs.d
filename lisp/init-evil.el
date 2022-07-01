@@ -1,5 +1,4 @@
 (use-package evil
-  :ensure t
   ; Dependencies listed on Github
   :ensure undo-tree
   :ensure undo-fu
@@ -14,7 +13,6 @@
 ;; Use Evil everywhere
 (use-package evil-collection
   :after evil
-  :ensure t
   :custom
   (evil-collection-setup-minibuffer t) ; Enable in mini-buffer
   :config
