@@ -41,6 +41,7 @@
 
 ;; custom.el
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
-(load custom-file)
+(when (file-exists-p custom-file)
+  (load custom-file))
 
 (provide 'init)
