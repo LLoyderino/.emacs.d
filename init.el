@@ -31,9 +31,12 @@
 ;; Load graphics
 (require 'init-theme)
 (require 'init-telephone-line)
+(require 'init-dimmer)
+(require 'init-hl-todo)
 
 ;; Load keybinds
 (require 'init-evil)
+(require 'init-which-key)
 
 ;; Others
 (require 'init-projectile)

@@ -1,3 +1,7 @@
+;; Font Settings
+(setq frame-font-face "JetBrains Mono"
+      frame-font-size "11")
+
 ;; Utility to check if a font exists
 (defun font-exists-p (font)
   "Check if the font exists"
@@ -5,13 +9,12 @@
 
 ;; Font
 ;; TODO implement non monospace fonts
-
-(when (font-exists-p "JetBrains Mono")
-  (set-frame-font "JetBrains Mono 11" nil t))
+(when (font-exists-p frame-font-face)
+  (set-frame-font (concat frame-font-face " " frame-font-size) nil t))
 
 ;; Theme
-(use-package nord-theme
-  :config (load-theme 'nord t))
+(use-package dracula-theme
+  :config (load-theme 'dracula t))
 
 ;; Relative line numbers
 (use-package linum-relative)
