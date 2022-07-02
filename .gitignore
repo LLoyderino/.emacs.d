@@ -4,6 +4,7 @@
 *.eld
 projects
 projectile.cache
+recentf
 
 # cache folders
 elpa/*

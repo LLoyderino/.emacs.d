@@ -23,4 +23,8 @@
 	      #'display-line-numbers-mode
 	    #'linum-relative-mode))
 
+;; All the icons
+(use-package all-the-icons
+  :if (display-graphic-p))
+
 (provide 'init-theme)

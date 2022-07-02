@@ -30,6 +30,7 @@
 
 ;; Load graphics
 (require 'init-theme)
+(require 'init-dashboard)
 (require 'init-telephone-line)
 (require 'init-dimmer)
 (require 'init-hl-todo)
