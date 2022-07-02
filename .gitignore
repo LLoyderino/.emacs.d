@@ -13,6 +13,7 @@ url/*
 tutorial/*
 eshell/*
 server/*
+.cache/*
 
 # other files
 custom.el

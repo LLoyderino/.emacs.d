@@ -28,13 +28,6 @@
 ;; Optimization
 (require 'init-async)
 
-;; Load graphics
-(require 'init-theme)
-(require 'init-dashboard)
-(require 'init-telephone-line)
-(require 'init-dimmer)
-(require 'init-hl-todo)
-
 ;; Load keybinds
 (require 'init-evil)
 (require 'init-which-key)
@@ -42,6 +35,14 @@
 ;; Others
 (require 'init-projectile)
 (require 'init-magit)
+
+;; Load graphics
+(require 'init-theme)
+(require 'init-dashboard)
+(require 'init-telephone-line)
+(require 'init-dimmer)
+(require 'init-hl-todo)
+(require 'init-treemacs)
 
 ;; custom.el
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
