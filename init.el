@@ -44,6 +44,9 @@
 (require 'init-hl-todo)
 (require 'init-treemacs)
 
+;; Programming & Misc
+(require 'init-org)
+
 ;; custom.el
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (when (file-exists-p custom-file)
