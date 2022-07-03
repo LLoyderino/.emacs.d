@@ -1,8 +1,0 @@
-#+title: Readme
-#+author: LLoyderino
-
-* Screenshots
-| *Dashboard*                 | *Editing Mode*            |
-| [[./screenshots/dashboard.png]] | [[./screenshots/editing.png]] |
-* Note
-You're free to download but this is not intended for anyone else but me to use.
