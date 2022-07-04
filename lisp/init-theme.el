@@ -1,3 +1,8 @@
+;; Disable menus
+(tool-bar-mode -1)
+(menu-bar-mode -1)
+(scroll-bar-mode -1)
+
 ;; Font Settings
 (setq frame-font-face "JetBrains Mono"
       frame-font-size "11")
