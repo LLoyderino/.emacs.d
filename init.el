@@ -47,8 +47,6 @@
 (require 'init-theme)
 (require 'init-dashboard)
 (require 'init-doom-modeline)
-(require 'init-dimmer)
-(require 'init-hl-todo)
 (require 'init-treemacs)
 
 ;; Programming & Misc

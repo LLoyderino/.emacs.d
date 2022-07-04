@@ -35,4 +35,24 @@
   :config
   (add-hook 'prog-mode-hook #'rainbow-delimiters-mode))
 
+;; Highlight current line
+(use-package hl-line
+  :ensure nil
+  :hook ((after-init . global-hl-line-mode)
+	 ((dashboard-mode eshell-mode shell-mode term-mode vterm-mode) .
+	  (lambda () (setq-local global-hl-line-mode nil)))))
+
+;; Highlight keywords
+(use-package hl-todo
+  :config
+  (global-hl-todo-mode))
+
+;; Dimming when out of focus
+(use-package dimmer
+  :init
+  (setq dimmer-fraction 0.40)
+  (dimmer-configure-which-key)
+  :config
+  (dimmer-mode t))
+
 (provide 'init-theme)
