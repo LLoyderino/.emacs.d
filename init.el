@@ -46,15 +46,11 @@
 
 ;; Programming & Misc
 (require 'init-org)
+(require 'init-restart-emacs)
 
 ;; custom.el
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (when (file-exists-p custom-file)
   (load custom-file))
-
-;; Quick reload utility
-(defun reload-config ()
-  (interactive)
-  (load-file (concat user-emacs-directory "init.el")))
 
 (provide 'init)
