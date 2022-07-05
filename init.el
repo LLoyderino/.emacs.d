@@ -38,6 +38,7 @@
 ;; Load keybinds
 (require 'init-evil)
 (require 'init-which-key)
+(require 'init-keybinds)
 
 ;; Others
 (require 'init-projectile)
