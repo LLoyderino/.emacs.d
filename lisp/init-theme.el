@@ -44,8 +44,15 @@
 
 ;; Highlight keywords
 (use-package hl-todo
+  :init
+  (setq hl-todo-keyword-faces
+	'(("TODO" . "#3AB0FF")))
   :config
-  (global-hl-todo-mode))
+  (global-hl-todo-mode)
+  (define-key hl-todo-mode-map (kbd "C-c p") 'hl-todo-previous)
+  (define-key hl-todo-mode-map (kbd "C-c n") 'hl-todo-next)
+  (define-key hl-todo-mode-map (kbd "C-c o") 'hl-todo-occur)
+  (define-key hl-todo-mode-map (kbd "C-c i") 'hl-todo-insert))
 
 ;; Dimming when out of focus
 (use-package dimmer
