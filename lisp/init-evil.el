@@ -18,4 +18,10 @@
   :config
   (evil-collection-init))
 
+;; Evil leader - Shortcuts with <SPC>
+(use-package evil-leader
+  :config
+  (global-evil-leader-mode)
+  (evil-leader/set-leader "<SPC>"))
+
 (provide 'init-evil)
