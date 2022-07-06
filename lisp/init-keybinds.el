@@ -1,3 +1,5 @@
+;;; TODO document custom keybinds
+
 ;; Bind windows key as super
 (when (eq system-type 'windows-nt)
   (setq w32-lwindow-modifier 'super))
@@ -17,6 +19,6 @@
 
 ;; Buffers
 (evil-leader/set-key "b b" 'switch-to-buffer)
-(evil-leader/set-key "b k" 'kill-buffer)
+(evil-leader/set-key "b k" 'kill-buffer-and-window)
 
 (provide 'init-keybinds)
