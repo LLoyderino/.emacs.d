@@ -17,5 +17,6 @@
 
 ;; Buffers
 (evil-leader/set-key "b b" 'switch-to-buffer)
+(evil-leader/set-key "b k" 'kill-buffer)
 
 (provide 'init-keybinds)

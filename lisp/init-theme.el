@@ -4,16 +4,19 @@
 (scroll-bar-mode -1)
 
 ;; Font setup
-(setq frame-font-face "JetBrains Mono"
-      frame-font-size "11")
+(setq frame-font-face "Victor Mono")
 
 (defun font-exists-p (font)
   "Check if the font exists"
   (if (null (x-list-fonts font)) nil t))
 
 ;; TODO implement non monospace fonts
+;; TODO auto-install font if missing
 (when (font-exists-p frame-font-face)
-  (set-frame-font (concat frame-font-face " " frame-font-size) nil t))
+  (set-face-attribute 'default nil
+		      :family frame-font-face
+		      :height 120
+		      :weight 'bold))
 
 ;; Theme setup
 (use-package dracula-theme
