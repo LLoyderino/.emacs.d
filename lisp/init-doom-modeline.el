@@ -1,4 +1,5 @@
 (use-package doom-modeline
+  :ensure t
   :ensure all-the-icons
   :init
   (setq doom-modeline-modal-icon nil)
