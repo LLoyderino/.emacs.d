@@ -53,6 +53,7 @@
 ;; Programming & Misc
 (require 'init-org)
 (require 'init-restart-emacs)
+(require 'init-c)
 
 ;; custom.el
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
