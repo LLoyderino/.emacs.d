@@ -4,19 +4,26 @@
 (scroll-bar-mode -1)
 
 ;; Font setup
-(setq frame-font-face "Victor Mono")
+(setq fixed-pitch-font-face "JetBrains Mono"
+      variable-pitch-font-face "Source Sans Pro")
 
 (defun font-exists-p (font)
   "Check if the font exists"
   (if (null (x-list-fonts font)) nil t))
 
-;; TODO implement non monospace fonts
 ;; TODO auto-install font if missing
-(when (font-exists-p frame-font-face)
+(when (font-exists-p fixed-pitch-font-face)
   (set-face-attribute 'default nil
-		      :family frame-font-face
-		      :height 120
-		      :weight 'bold))
+		      :font fixed-pitch-font-face
+		      :height 120)
+  (set-face-attribute 'fixed-pitch nil
+		      :font fixed-pitch-font-face
+		      :height 120))
+
+(when (font-exists-p variable-pitch-font-face)
+  (set-face-attribute 'variable-pitch nil
+		      :font variable-pitch-font-face
+		      :height 140))
 
 ;; Theme setup
 (use-package dracula-theme
