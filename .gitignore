@@ -15,6 +15,7 @@ eshell/*
 server/*
 .cache/*
 fonts/*
+elpy/*
 
 # other files
 custom.el

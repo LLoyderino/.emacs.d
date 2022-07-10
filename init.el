@@ -50,10 +50,22 @@
 (require 'init-doom-modeline)
 (require 'init-treemacs)
 
-;; Programming & Misc
+;; Programming
+(require 'init-company)
+(require 'init-yasnippet)
+
+;; Org
 (require 'init-org)
 (require 'init-restart-emacs)
 (require 'init-c)
+
+;; Python + Django
+(require 'init-python)
+(require 'init-django)
+
+;; Python + Django
+(require 'init-python)
+(require 'init-django)
 
 ;; custom.el
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
