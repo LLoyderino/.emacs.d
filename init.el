@@ -72,4 +72,7 @@
 (when (file-exists-p custom-file)
   (load custom-file))
 
+;; This is annoying
+(setq make-backup-files nil)
+
 (provide 'init)
