@@ -1,8 +1,3 @@
-;; Disable menus
-(tool-bar-mode -1)
-(menu-bar-mode -1)
-(scroll-bar-mode -1)
-
 ;; Font setup
 (setq fixed-pitch-font-face "JetBrains Mono"
       variable-pitch-font-face "Source Sans Pro")

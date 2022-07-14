@@ -32,6 +32,9 @@
 (eval-when-compile
   (require 'use-package))
 
+;; Better defaults
+(use-package better-defaults)
+
 ;; Optimization
 (require 'init-async)
 
@@ -66,13 +69,5 @@
 ;; Python + Django
 (require 'init-python)
 (require 'init-django)
-
-;; custom.el
-(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
-(when (file-exists-p custom-file)
-  (load custom-file))
-
-;; This is annoying
-(setq make-backup-files nil)
 
 (provide 'init)
