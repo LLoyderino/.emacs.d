@@ -27,3 +27,7 @@
 ;; Magit
 (use-package magit)
 
+;; Catppuccin theme
+;; (require 'theme)
+(load "~/.emacs.d/theme.el")
+
