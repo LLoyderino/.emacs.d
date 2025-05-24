@@ -14,6 +14,9 @@
 (menu-bar-mode 0)
 (scroll-bar-mode 0)
 
+;; Disable bell
+(setq visible-bell nil)
+
 ;; Melpa
 (require 'package)
 (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/") t)
