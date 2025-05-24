@@ -27,11 +27,15 @@
 (require 'use-package-ensure)
 (setq use-package-always-ensure t)
 
-;; Magit
-(use-package magit)
+;; Better defaults
+(use-package better-defaults)
+(setq read-process-output-max (* 1024 1024 4))
 
 ;; Catppuccin theme
 (load "~/.emacs.d/theme.el")
+
+;; Magit
+(use-package magit)
 
 ;; Raindow delimiters
 (use-package rainbow-delimiters
