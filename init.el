@@ -33,3 +33,7 @@
 ;; Catppuccin theme
 (load "~/.emacs.d/theme.el")
 
+;; Raindow delimiters
+(use-package rainbow-delimiters
+  :config (add-hook 'prog-mode-hook #'rainbow-delimiters-mode))
+
