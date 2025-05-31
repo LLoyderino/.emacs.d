@@ -47,3 +47,8 @@
 ;; Markdown
 (use-package markdown-mode)
 
+;; Flymake
+(setq flymake-show-diagnostics-at-end-of-line t)
+(define-key flymake-mode-map (kbd "M-n") 'flymake-goto-next-error)
+(define-key flymake-mode-map (kbd "M-p") 'flymake-goto-prev-error)
+
