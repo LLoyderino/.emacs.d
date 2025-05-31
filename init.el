@@ -34,6 +34,9 @@
 ;; Catppuccin theme
 (load "~/.emacs.d/theme.el")
 
+;; pdf-tools
+(use-package pdf-tools)
+
 ;; Magit
 (use-package magit)
 
