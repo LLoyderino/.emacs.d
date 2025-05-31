@@ -1,6 +1,6 @@
 ;; Please no custom file
-(setq custom-file "~/.emacs.d/emacs-custom.el")
-(load custom-file)
+(setq custom-file (locate-user-emacs-file "emacs-custom.el")
+(load custom-file 'noerror 'nomessage)
 
 ;; Start maximized
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
