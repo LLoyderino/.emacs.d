@@ -47,3 +47,7 @@
 (define-key flymake-mode-map (kbd "M-n") 'flymake-goto-next-error)
 (define-key flymake-mode-map (kbd "M-p") 'flymake-goto-prev-error)
 
+;; Auto-completion
+(use-package company)
+(add-hook 'after-init-hook 'global-company-mode)
+
