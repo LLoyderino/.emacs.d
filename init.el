@@ -1,5 +1,5 @@
 ;; Please no custom file
-(setq custom-file (locate-user-emacs-file "emacs-custom.el")
+(setq custom-file (locate-user-emacs-file "emacs-custom.el"))
 (load custom-file 'noerror 'nomessage)
 
 ;; Start maximized
@@ -27,7 +27,7 @@
 (setq global-auto-revert-non-file-buffers t)   ; Update dired when directory changes
 
 ;; Catppuccin theme
-(load "~/.emacs.d/theme.el")
+(load (locate-user-emacs-file "theme.el"))
 
 ;; pdf-tools
 (use-package pdf-tools)
@@ -43,6 +43,7 @@
 (use-package markdown-mode)
 
 ;; Flymake
+(require 'flymake)
 (setq flymake-show-diagnostics-at-end-of-line t)
 (define-key flymake-mode-map (kbd "M-n") 'flymake-goto-next-error)
 (define-key flymake-mode-map (kbd "M-p") 'flymake-goto-prev-error)
