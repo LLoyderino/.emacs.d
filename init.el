@@ -21,7 +21,10 @@
 
 ;; Better defaults
 (use-package better-defaults)
-(setq read-process-output-max (* 1024 1024 4))
+(setq read-process-output-max (* 1024 1024 4)) ; Increase garbage collection threshold
+
+(global-auto-revert-mode 1)                    ; Update files changed externally
+(setq global-auto-revert-non-file-buffers t)   ; Update dired when directory changes
 
 ;; Catppuccin theme
 (load "~/.emacs.d/theme.el")
