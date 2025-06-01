@@ -9,14 +9,6 @@
 (setq display-line-numbers t)
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
 
-;; Remove clutter
-(tool-bar-mode 0)
-(menu-bar-mode 0)
-(scroll-bar-mode 0)
-
-;; Disable bell
-(setq visible-bell nil)
-
 ;; Melpa
 (require 'package)
 (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/") t)
