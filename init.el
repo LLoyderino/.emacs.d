@@ -55,3 +55,7 @@
 (use-package company)
 (add-hook 'after-init-hook 'global-company-mode)
 
+;; Nix
+(use-package nix-ts-mode
+  :mode "\\.nix\\'")
+
