@@ -6,7 +6,8 @@
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 ;; Font
-(set-frame-font "JetBrainsMono Nerd Font 12" nil t)
+(add-to-list 'default-frame-alist
+             '(font . "JetBrainsMono Nerd Font 12"))
 
 ;; Add line numbers
 (setq display-line-numbers t)
