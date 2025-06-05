@@ -5,6 +5,9 @@
 ;; Start maximized
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
+;; Font
+(set-frame-font "JetBrainsMono Nerd Font 12" nil t)
+
 ;; Add line numbers
 (setq display-line-numbers t)
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
