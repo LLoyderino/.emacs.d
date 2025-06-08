@@ -30,6 +30,8 @@
 (global-auto-revert-mode 1)                    ; Update files changed externally
 (setq global-auto-revert-non-file-buffers t)   ; Update dired when directory changes
 
+(setq calendar-week-start-day 1)               ; Start calendar on Monday
+
 ;; Catppuccin theme
 (load (locate-user-emacs-file "theme.el"))
 
