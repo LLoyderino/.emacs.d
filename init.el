@@ -27,6 +27,8 @@
 (use-package better-defaults)
 (setq read-process-output-max (* 1024 1024 4)) ; Increase garbage collection threshold
 
+(use-package no-littering)                     ; Move litter to separate dirs
+
 (global-auto-revert-mode 1)                    ; Update files changed externally
 (setq global-auto-revert-non-file-buffers t)   ; Update dired when directory changes
 
