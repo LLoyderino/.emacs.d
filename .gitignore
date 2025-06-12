@@ -3,5 +3,6 @@
 !.gitignore
 !init.el
 !theme.el
+!snippets
 !README.md
 

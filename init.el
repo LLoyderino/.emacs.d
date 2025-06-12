@@ -60,6 +60,17 @@
 (use-package company)
 (add-hook 'after-init-hook 'global-company-mode)
 
+;; Snippets
+(use-package yasnippet
+  :hook ((text-mode
+          prog-mode
+          conf-mode
+          snippet-mode) . yas-minor-mode)
+  :init (setq yas-snippet-dir (locate-user-emacs-file "snippets")))
+
+(use-package yasnippet-snippets) ; Third party snippets, could replace
+                                 ; them with my own one day...
+
 ;; Nix
 (use-package nix-ts-mode
   :mode "\\.nix\\'")
