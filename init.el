@@ -29,6 +29,10 @@
 
 (use-package no-littering)                     ; Move litter to separate dirs
 
+(save-place-mode 1)  ; Remember last place visited in a file
+                     ; NOTE: this might already be set by the better-defaults package
+                     ; but I'm not 100% sure about it
+
 (global-auto-revert-mode 1)                    ; Update files changed externally
 (setq global-auto-revert-non-file-buffers t)   ; Update dired when directory changes
 
