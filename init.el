@@ -75,6 +75,11 @@
 (use-package yasnippet-snippets) ; Third party snippets, could replace
                                  ; them with my own one day...
 
+;; LSP configuration with Eglot for minimalism™
+(use-package eglot-booster
+  :vc (:url "https://github.com/jdtsmith/eglot-booster")
+  :after eglot
+  :config (eglot-booster-mode))
 ;; Nix
 (use-package nix-ts-mode
   :mode "\\.nix\\'")
