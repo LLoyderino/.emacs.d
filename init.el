@@ -24,7 +24,12 @@
 (setq use-package-always-ensure t)
 
 ;; Better defaults
-(use-package better-defaults)
+(use-package vertico
+  :init (vertico-mode))
+
+(use-package better-defaults                   ; It is important to run after vertico
+                                               ; or it will run completion with ido
+  :after vertico)
 (setq read-process-output-max (* 1024 1024 4)) ; Increase garbage collection threshold
 
 (use-package no-littering)                     ; Move litter to separate dirs
@@ -40,6 +45,19 @@
 
 ;; Catppuccin theme
 (load (locate-user-emacs-file "theme.el"))
+
+;; Completion
+(use-package corfu
+  :commands global-corfu-mode
+  :init (add-hook 'after-init-hook #'global-corfu-mode)
+  :config (setq corfu-auto t))
+
+;; Annotations in minibuffer
+(use-package marginalia
+  :bind
+  (:map minibuffer-local-map ("M-A" . marginalia-cycle))
+  :commands marginalia-mode
+  :init (add-hook 'after-init-hook #'marginalia-mode))
 
 ;; pdf-tools
 (use-package pdf-tools)
@@ -59,10 +77,6 @@
 (setq flymake-show-diagnostics-at-end-of-line t)
 (define-key flymake-mode-map (kbd "M-n") 'flymake-goto-next-error)
 (define-key flymake-mode-map (kbd "M-p") 'flymake-goto-prev-error)
-
-;; Auto-completion
-(use-package company)
-(add-hook 'after-init-hook 'global-company-mode)
 
 ;; Snippets
 (use-package yasnippet
