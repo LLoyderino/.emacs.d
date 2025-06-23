@@ -43,6 +43,8 @@
 
 (setq calendar-week-start-day 1)               ; Start calendar on Monday
 
+(which-key-mode) ; Enable which-key (didn't know this is built-in now!)
+
 ;; Catppuccin theme
 (load (locate-user-emacs-file "theme.el"))
 
@@ -88,6 +90,17 @@
 
 (use-package yasnippet-snippets) ; Third party snippets, could replace
                                  ; them with my own one day...
+
+;; Projects
+(use-package rg)
+
+(use-package projectile
+  :after rg
+  :init
+  (projectile-mode +1)
+  :bind (:map projectile-mode-map
+              ("s-p" . projectile-command-map)
+              ("C-c p" . projectile-command-map)))
 
 ;; LSP configuration with Eglot for minimalism™
 (use-package eglot-booster
