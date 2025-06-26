@@ -45,6 +45,12 @@
 
 (which-key-mode) ; Enable which-key (didn't know this is built-in now!)
 
+;; Undo
+(use-package vundo
+  :custom
+  (vundo-glyph-alist vundo-unicode-symbols)
+  (vundo-compact-display t))
+
 ;; Catppuccin theme
 (load (locate-user-emacs-file "theme.el"))
 
