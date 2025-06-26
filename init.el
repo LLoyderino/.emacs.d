@@ -107,6 +107,7 @@
   :vc (:url "https://github.com/jdtsmith/eglot-booster")
   :after eglot
   :config (eglot-booster-mode))
+
 ;; Nix
 (use-package nix-ts-mode
   :mode "\\.nix\\'")
