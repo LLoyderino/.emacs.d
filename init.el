@@ -35,7 +35,10 @@
 
 (setq calendar-week-start-day 1)               ; Start calendar on Monday
 
-(which-key-mode) ; Enable which-key (didn't know this is built-in now!)
+(which-key-mode)                               ; Enable which-key (didn't know this is built-in now!)
+
+(setq scroll-conservatively 5                  ; Smooth scrolling~
+      scroll-margin 15)                        ; https://themkat.net/2025/03/25/simple_smoother_emacs_scrolling.html
 
 ;; Undo
 (use-package vundo
