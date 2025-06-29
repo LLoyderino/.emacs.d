@@ -52,6 +52,12 @@
   :init (add-hook 'after-init-hook #'global-corfu-mode)
   :config (setq corfu-auto t))
 
+;; Retro-active completion
+(use-package orderless
+  :custom
+  (completion-styles '(orderless basic))
+  (completion-category-overrides '((file (styles basic partial-completion)))))
+
 ;; Annotations in minibuffer
 (use-package marginalia
   :bind
