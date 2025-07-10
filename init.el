@@ -135,6 +135,11 @@
               ("s-p" . projectile-command-map)
               ("C-c p" . projectile-command-map)))
 
+;; Treesitter grammars
+(setq treesit-language-source-alist
+      '((php "https://github.com/tree-sitter/tree-sitter-php" "v0.23.12" "php/src")
+        (phpdoc "https://github.com/claytonrcarter/tree-sitter-phpdoc" "v0.1.6")))
+
 ;; LSP configuration with Eglot for minimalism™
 (use-package eglot-booster
   :vc (:url "https://github.com/jdtsmith/eglot-booster")
