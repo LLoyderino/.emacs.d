@@ -100,9 +100,11 @@
 ;; Magit
 (use-package magit)
 
-;; Raindow delimiters
+;; Parenthesis
+(add-hook 'prog-mode-hook #'electric-pair-mode)
+
 (use-package rainbow-delimiters
-  :config (add-hook 'prog-mode-hook #'rainbow-delimiters-mode))
+  :hook (prog-mode-hook . rainbow-delimiters-mode))
 
 ;; Markdown
 (use-package markdown-mode)
