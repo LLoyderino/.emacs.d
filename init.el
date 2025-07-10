@@ -40,6 +40,29 @@
 (setq scroll-conservatively 5                  ; Smooth scrolling~
       scroll-margin 5)                         ; https://themkat.net/2025/03/25/simple_smoother_emacs_scrolling.html
 
+;; Org & Agenda
+(global-set-key (kbd "C-c l") #'org-store-link)
+(global-set-key (kbd "C-c a") #'org-agenda)
+(global-set-key (kbd "C-c c") #'org-capture)
+
+(setq org-directory "~/Documents/Org"
+      org-agenda-directory (file-name-concat org-directory "Agenda")
+      org-agenda-files (list org-agenda-directory))
+
+(setq org-html-head ""
+      org-html-head-extra ""
+      org-html-head-include-default-style nil
+      org-html-head-include-scripts nil
+      org-html-preamble nil
+      org-html-postamble nil
+      org-html-use-infojs nil)
+
+(setq org-capture-templates
+      `(("t" "Todo" entry (file ,(file-name-concat org-agenda-directory "Todo.org"))
+         "* TODO %?\n %i\n")
+        ("i" "Idea" entry (file ,(file-name-concat org-agenda-directory "Idea.org"))
+         "* TODO %^{Title} :idea:\n %?\n %i\n")))
+
 ;; Undo
 (use-package vundo
   :custom
