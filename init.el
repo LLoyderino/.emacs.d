@@ -40,6 +40,15 @@
 (setq scroll-conservatively 5                  ; Smooth scrolling~
       scroll-margin 5)                         ; https://themkat.net/2025/03/25/simple_smoother_emacs_scrolling.html
 
+
+;; Multiple-cursors
+(use-package multiple-cursors
+  :bind
+  ("C-S-c C-S-c" . mc/edit-lines)
+  ("C->" . mc/mark-next-like-this)
+  ("C-<" . mc/mark-previous-like-this)
+  ("C-c C-<" . mc/mark-all-like-this))
+
 ;; Org & Agenda
 (global-set-key (kbd "C-c l") #'org-store-link)
 (global-set-key (kbd "C-c a") #'org-agenda)
