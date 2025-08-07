@@ -161,47 +161,12 @@
 (use-package nix-ts-mode
   :mode "\\.nix\\'")
 
+;; Java
+(add-to-list 'auto-mode-alist '("\\.java\\'" . java-ts-mode))
+
+;; Kotlin
+(use-package kotlin-ts-mode
+  :mode "\\.kt\\'")
+
 ;; Web development
 (use-package web-mode)
-
-;; Angular
-(define-derived-mode angular-mode web-mode "angular")
-
-;; TODO: automatic ngserver path evaluation
-;; (with-eval-after-load 'eglot
-;;   (let ((ngserver-path (executable-find "ngserver")))
-;;     (when ngserver-path
-;;       (add-to-list 'eglot-server-programs
-;;                    '(angular-mode . ("ngserver"
-;;                                      "--stdio"
-;;                                      "--tsProbeLocations"
-;;                                      "./node_modules/typescript/lib"
-;;                                      "--ngProbeLocations"
-;;                                      ngserver-path))))))
-
-(with-eval-after-load 'eglot
-  (add-to-list 'eglot-server-programs
-               '(angular-mode . ("ngserver"
-                                 "--stdio"
-                                 "--tsProbeLocations"
-                                 "./node_modules/typescript/lib"
-                                 "--ngProbeLocations"
-                                 "/etc/profiles/per-user/lloyd/bin/ngserver"))))
-
-
-(add-hook 'angular-mode-hook 'eglot-ensure)
-
-;; ;; Astro (depends on web-mode)
-;; (define-derived-mode astro-mode web-mode "astro")
-;; (setq auto-mode-alist
-;;       (append '((".*\\.astro\\'" . astro-mode))
-;;               auto-mode-alist))
-
-;; (with-eval-after-load 'eglot
-;;   (add-to-list 'eglot-server-programs
-;;                '(astro-mode . ("astro-ls" "--stdio"
-;;                                :initializationOptions
-;;                                (:typescript (:tsdk "./node_modules/typescript/lib"))))))
-
-;; (add-hook 'astro-mode-hook 'eglot-ensure)
-
