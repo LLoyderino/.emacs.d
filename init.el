@@ -104,7 +104,10 @@
   :init (add-hook 'after-init-hook #'marginalia-mode))
 
 ;; pdf-tools
-(use-package pdf-tools)
+(use-package pdf-tools
+  :config
+  ;; Let's face it, I'll be more likely reading PDFs than editing 😉
+  (add-to-list 'auto-mode-alist '("\\.pdf\\'" . pdf-view-mode)))
 
 ;; Magit
 (use-package magit)
