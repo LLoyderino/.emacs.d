@@ -40,6 +40,7 @@
 (setq scroll-conservatively 5                  ; Smooth scrolling~
       scroll-margin 5)                         ; https://themkat.net/2025/03/25/simple_smoother_emacs_scrolling.html
 
+(global-set-key (kbd "M-\\") #'just-one-space) ; Leave one space instead of killing all
 
 ;; Multiple-cursors
 (use-package multiple-cursors
