@@ -154,12 +154,6 @@
       '((php "https://github.com/tree-sitter/tree-sitter-php" "v0.23.12" "php/src")
         (phpdoc "https://github.com/claytonrcarter/tree-sitter-phpdoc" "v0.1.6")))
 
-;; LSP configuration with Eglot for minimalism™
-(use-package eglot-booster
-  :vc (:url "https://github.com/jdtsmith/eglot-booster")
-  :after eglot
-  :config (eglot-booster-mode))
-
 ;; Nix
 (use-package nix-ts-mode
   :mode "\\.nix\\'")
