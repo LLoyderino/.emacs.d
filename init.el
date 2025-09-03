@@ -3,7 +3,9 @@
 
 ;; Font
 (add-to-list 'default-frame-alist
-             '(font . "JetBrainsMono Nerd Font 12"))
+             `(font . ,(if (eq system-type 'windows-nt)
+                           "JetBrainsMono NF 12"
+                         "JetBrainsMono Nerd Font 12")))
 
 ;; Add line numbers
 (setq display-line-numbers t)
@@ -80,7 +82,12 @@
   (vundo-compact-display t))
 
 ;; Catppuccin theme
-(load (locate-user-emacs-file "theme.el"))
+(if (eq system-type 'windows-nt)
+    (use-package catppuccin-theme
+      :config ;; On Windows I am happy with perma dark mode
+      (setq catppuccin-flavor 'mocha)
+      (load-theme 'catppuccin :no-confirm))
+  (load (locate-user-emacs-file "theme.el")))
 
 ;; (use-package doom-modeline
 ;;   :hook (after-init . doom-modeline-mode))
