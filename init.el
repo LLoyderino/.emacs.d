@@ -76,9 +76,7 @@
 
 (setq org-capture-templates
       `(("t" "Todo" entry (file ,(file-name-concat org-agenda-directory "Todo.org"))
-         "* TODO %?\n %i\n")
-        ("i" "Idea" entry (file ,(file-name-concat org-agenda-directory "Idea.org"))
-         "* TODO %^{Title} :idea:\n%?\n %i\n")))
+         "* TODO %?\n %i\n")))
 
 ;; Undo
 (use-package vundo
