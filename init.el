@@ -44,6 +44,11 @@
 
 (global-set-key (kbd "M-\\") #'just-one-space) ; Leave one space instead of killing all
 
+;; Spellcheck
+(setq ispell-program-name "aspell")
+(add-hook 'text-mode-hook 'flyspell-mode)
+(add-hook 'prog-mode-hook 'flyspell-prog-mode)
+
 ;; Multiple-cursors
 (use-package multiple-cursors
   :bind
