@@ -92,9 +92,6 @@
       (load-theme 'catppuccin :no-confirm))
   (load (locate-user-emacs-file "theme.el")))
 
-;; (use-package doom-modeline
-;;   :hook (after-init . doom-modeline-mode))
-
 ;; Completion
 (use-package corfu
   :commands global-corfu-mode
