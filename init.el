@@ -154,6 +154,10 @@
       '((php "https://github.com/tree-sitter/tree-sitter-php" "v0.23.12" "php/src")
         (phpdoc "https://github.com/claytonrcarter/tree-sitter-phpdoc" "v0.1.6")))
 
+;; PHP
+(add-to-list 'auto-mode-alist '("\\.php\\'" . php-ts-mode))
+(add-to-list 'auto-mode-alist '("\\.blade\\.php\\'" . web-mode))
+
 ;; Nix
 (use-package nix-ts-mode
   :mode "\\.nix\\'")
