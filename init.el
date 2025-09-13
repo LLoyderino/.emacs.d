@@ -149,17 +149,6 @@
 (use-package yasnippet-snippets) ; Third party snippets, could replace
                                  ; them with my own one day...
 
-;; Projects
-(use-package rg)
-
-(use-package projectile
-  :after rg
-  :init
-  (projectile-mode +1)
-  :bind (:map projectile-mode-map
-              ("s-p" . projectile-command-map)
-              ("C-c p" . projectile-command-map)))
-
 ;; Treesitter grammars
 (setq treesit-language-source-alist
       '((php "https://github.com/tree-sitter/tree-sitter-php" "v0.23.12" "php/src")
