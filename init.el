@@ -11,6 +11,23 @@
 (setq display-line-numbers t)
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
 
+;; Visualize whitespace for programming modes
+;; Yoinked from Rexim (Tsoding)
+;; https://github.com/rexim/dotfiles/blob/a96479ac248e8d1b3ad307fdd667eb4593eec56d/.emacs.custom.el#L31
+(setq whitespace-style
+      '(face
+        tabs
+        spaces
+        trailing
+        space-before-tab
+        newline
+        indentation
+        empty
+        space-after-tab
+        space-mark
+        tab-mark))
+(add-hook 'prog-mode-hook 'whitespace-mode)
+
 ;; Melpa
 (require 'package)
 (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/") t)
