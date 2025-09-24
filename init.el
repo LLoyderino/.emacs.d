@@ -97,6 +97,17 @@
       `(("t" "Todo" entry (file ,(file-name-concat org-agenda-directory "Todo.org"))
          "* TODO %?\n %i\n")))
 
+;; Roam
+(use-package org-roam
+  :custom
+  (org-roam-directory (file-truename "~/Documents/Org/Roam/"))
+  :bind (("C-c n l" . org-roam-buffer-toggle)
+         ("C-c n f" . org-roam-node-find)
+         ("C-c n i" . org-roam-node-insert)
+         ("C-c n c" . org-roam-capture))
+  :config
+  (org-roam-db-autosync-mode))
+
 ;; Undo
 (use-package vundo
   :custom
