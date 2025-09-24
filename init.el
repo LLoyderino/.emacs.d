@@ -189,6 +189,7 @@
 
 ;; PHP
 (add-to-list 'auto-mode-alist '("\\.php\\'" . php-ts-mode))
+(add-to-list 'auto-mode-alist '("^artisan$" . php-ts-mode))
 (add-to-list 'auto-mode-alist '("\\.blade\\.php\\'" . web-mode))
 
 ;; Nix
