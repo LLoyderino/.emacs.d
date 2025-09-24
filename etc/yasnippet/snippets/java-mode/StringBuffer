@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: StringBuffer
+# key: sb
+# --
+StringBuffer $1 = new StringBuffer($2);

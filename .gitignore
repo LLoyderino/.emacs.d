@@ -1,8 +1,12 @@
-*
+# Cache stuff
+backups/
+eln-cache/
+elpa/
 
-!.gitignore
-!init.el
-!theme.el
-!snippets
-!README.md
+# These I'm still not sure
+custom.el
+var/
+etc/*
 
+# Allow snippets tho
+!etc/yasnippet

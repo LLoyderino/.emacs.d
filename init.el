@@ -150,8 +150,10 @@
 
 ;; Treesitter grammars
 (setq treesit-language-source-alist
-      '((php "https://github.com/tree-sitter/tree-sitter-php" "v0.23.12" "php/src")
-        (phpdoc "https://github.com/claytonrcarter/tree-sitter-phpdoc" "v0.1.6")))
+      '((java "https://github.com/tree-sitter/tree-sitter-java" "v0.23.5")
+        (php "https://github.com/tree-sitter/tree-sitter-php" "v0.23.12" "php/src")
+        (phpdoc "https://github.com/claytonrcarter/tree-sitter-phpdoc" "v0.1.6")
+        (nix "https://github.com/nix-community/tree-sitter-nix" "v0.3.0")))
 
 ;; PHP
 (add-to-list 'auto-mode-alist '("\\.php\\'" . php-ts-mode))
