@@ -64,9 +64,10 @@
 (global-set-key (kbd "M-\\") #'just-one-space) ; Leave one space instead of killing all
 
 ;; Spellcheck
-(setq ispell-program-name "aspell")
-(add-hook 'text-mode-hook 'flyspell-mode)
-(add-hook 'prog-mode-hook 'flyspell-prog-mode)
+(unless (eq system-type 'windows-nt)
+  (setq ispell-program-name "aspell")
+  (add-hook 'text-mode-hook 'flyspell-mode)
+  (add-hook 'prog-mode-hook 'flyspell-prog-mode))
 
 ;; Multiple-cursors
 (use-package multiple-cursors
@@ -100,7 +101,9 @@
 ;; Roam
 (use-package org-roam
   :custom
-  (org-roam-directory (file-truename "~/Documents/Org/Roam/"))
+  (org-roam-directory (file-truename (if (eq system-type 'windows-nt)
+                                         "D:/Documents/Org/Roam"
+                                       "~/Documents/Org/Roam/")))
   :bind (("C-c n l" . org-roam-buffer-toggle)
          ("C-c n f" . org-roam-node-find)
          ("C-c n i" . org-roam-node-insert)
