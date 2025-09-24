@@ -164,9 +164,5 @@
 ;; Java
 (add-to-list 'auto-mode-alist '("\\.java\\'" . java-ts-mode))
 
-;; Kotlin
-(use-package kotlin-ts-mode
-  :mode "\\.kt\\'")
-
 ;; Web development
 (use-package web-mode)
