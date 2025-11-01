@@ -5,6 +5,9 @@
 
 (use-package catppuccin-theme)
 
+(defun has-gsettings ()
+  (= (call-process-shell-command "gsettings --version") 0))
+
 (defun set-color-scheme ()
   (set-theme
    (string-trim
@@ -28,8 +31,13 @@
     (set-process-query-on-exit-flag process nil)))
 
 ;; Initialize settings
-(set-color-scheme)
-(monitor-theme-changes)
+(when (has-gsettings)
+  (set-color-scheme)
+  (monitor-theme-changes))
+
+(when (not (has-gsettings))
+    (setq catppuccin-flavor 'mocha)
+    (load-theme 'catppuccin :no-confirm))
 
 (provide 'theme)
 

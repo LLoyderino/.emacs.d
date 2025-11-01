@@ -126,12 +126,7 @@
   (vundo-compact-display t))
 
 ;; Catppuccin theme
-(if (eq system-type 'windows-nt)
-    (use-package catppuccin-theme
-      :config ;; On Windows I am happy with perma dark mode
-      (setq catppuccin-flavor 'mocha)
-      (load-theme 'catppuccin :no-confirm))
-  (load (locate-user-emacs-file "theme.el")))
+(load (locate-user-emacs-file "theme.el"))
 
 ;; Completion
 (use-package corfu
