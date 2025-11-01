@@ -111,6 +111,14 @@
   :config
   (org-roam-db-autosync-mode))
 
+;; Mail
+(load (locate-user-emacs-file "secrets.el"))                  ; Full-name and Mail address
+(setq gnus-select-method '(nnimap "imap.gmail.com")
+      message-send-mail-function 'smtpmail-send-it
+      smtpmail-default-smtp-server "smtp.gmail.com"
+      gnus-message-archive-method '(nnimap "imap.gmail.com")
+      gnus-message-archive-group "[Gmail]/Sent Mail")         ; Gmail configuration
+
 ;; Undo
 (use-package vundo
   :custom

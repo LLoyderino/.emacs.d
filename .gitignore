@@ -10,3 +10,6 @@ etc/*
 
 # Allow snippets tho
 !etc/yasnippet
+
+# Hide secrets :)
+secrets.el
