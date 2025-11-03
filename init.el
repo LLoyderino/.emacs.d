@@ -191,7 +191,8 @@
         (jsdoc "https://github.com/tree-sitter/tree-sitter-jsdoc" "v0.25.0")
         (nix "https://github.com/nix-community/tree-sitter-nix" "v0.3.0")
         (php "https://github.com/tree-sitter/tree-sitter-php" "v0.23.12" "php/src")
-        (phpdoc "https://github.com/claytonrcarter/tree-sitter-phpdoc" "v0.1.6")))
+        (phpdoc "https://github.com/claytonrcarter/tree-sitter-phpdoc" "v0.1.6")
+        (python "https://github.com/tree-sitter/tree-sitter-python" "v0.25.0")))
 
 ;; PHP
 (add-to-list 'auto-mode-alist '("\\.php\\'" . php-ts-mode))
