@@ -56,6 +56,7 @@
 
 (which-key-mode)                               ; Enable which-key (didn't know this is built-in now!)
 
+(delete-selection-mode 1)
 (setq-default fill-column 94)                  ; Fill columns to half of my laptop's screen
 
 (global-set-key (kbd "M-\\") #'just-one-space) ; Leave one space instead of killing all
