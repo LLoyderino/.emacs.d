@@ -115,12 +115,6 @@
       gnus-message-archive-method '(nnimap "imap.gmail.com")
       gnus-message-archive-group "[Gmail]/Sent Mail")         ; Gmail configuration
 
-;; Undo
-(use-package vundo
-  :custom
-  (vundo-glyph-alist vundo-unicode-symbols)
-  (vundo-compact-display t))
-
 ;; Catppuccin theme
 (load (locate-user-emacs-file "theme.el"))
 
@@ -164,10 +158,6 @@
 
 ;; Magit
 (use-package magit)
-
-;; Parenthesis
-(use-package rainbow-delimiters
-  :hook (prog-mode-hook . rainbow-delimiters-mode))
 
 ;; Markdown
 (use-package markdown-mode)
