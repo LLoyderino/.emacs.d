@@ -59,8 +59,6 @@
 (delete-selection-mode 1)
 (setq-default fill-column 94)                  ; Fill columns to half of my laptop's screen
 
-(global-set-key (kbd "M-\\") #'just-one-space) ; Leave one space instead of killing all
-
 ;; Spellcheck
 (unless (eq system-type 'windows-nt)
   (setq ispell-program-name "aspell")
