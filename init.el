@@ -118,24 +118,8 @@
 ;; Catppuccin theme
 (load (locate-user-emacs-file "theme.el"))
 
-;; Completion
-(use-package corfu
-  :init
-  (global-corfu-mode)
-  (corfu-history-mode)
-  (corfu-popupinfo-mode))
-
-;; Enable indentation+completion using the TAB key.
-;; `completion-at-point' is often bound to M-TAB.
-(setq tab-always-indent 'complete)
-
-(use-package cape
-  :bind ("C-c p" . cape-prefix-map)
-  :init
-  (add-hook 'completion-at-point-functions #'cape-dabbrev)
-  (add-hook 'completion-at-point-functions #'cape-file)
-  (add-hook 'completion-at-point-functions #'cape-elisp-block)
-  (add-hook 'completion-at-point-functions #'cape-dict))
+(use-package company
+  :hook (after-init . company-mode))
 
 ;; Retro-active completion
 (use-package orderless
