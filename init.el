@@ -4,7 +4,7 @@
 ;; Font
 (add-to-list 'default-frame-alist
              `(font . ,(if (eq system-type 'windows-nt)
-                           "JetBrainsMono NF 12"
+                           "IBM Plex Mono 12"
                          "JetBrainsMono Nerd Font 12")))
 
 ;; Add line numbers
