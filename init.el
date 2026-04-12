@@ -2,10 +2,7 @@
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 ;; Font
-(add-to-list 'default-frame-alist
-             `(font . ,(if (eq system-type 'windows-nt)
-                           "IBM Plex Mono 12"
-                         "JetBrainsMono Nerd Font 12")))
+(add-to-list 'default-frame-alist `(font . "IBM Plex Mono 12"))
 
 ;; Add line numbers
 (setq display-line-numbers t)
