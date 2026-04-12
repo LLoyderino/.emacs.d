@@ -42,7 +42,20 @@
 (use-package better-defaults                   ; It is important to run after vertico
                                                ; or it will run completion with ido
   :after vertico)
+(setq help-window-select t)                    ; Automatically move cursor into help window
+(setq kill-do-not-save-duplicates t)           ; No duplicates in the kill ring
+
+;; Here’s a scenario: you copy a URL from your browser, switch to Emacs, kill a line with C-k,
+;; and then try to yank the URL you copied earlier with C-y. Gone. The kill replaced it on the
+;; clipboard.  This setting makes Emacs save the existing clipboard content into the kill ring
+;; before overwriting it:
+(setq save-interprogram-paste-before-kill t)
+
 (setq read-process-output-max (* 1024 1024 4)) ; Increase garbage collection threshold
+
+(setq-default bidi-display-reordering 'left-to-right   ; Disables bidirectional scanning
+              bidi-paragraph-direction 'left-to-right) ; aka. RTL language support
+(setq bidi-inhibit-bpa t)
 
 (use-package no-littering)                     ; Move litter to separate dirs
 
