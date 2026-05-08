@@ -117,8 +117,10 @@
   :config
   (org-roam-db-autosync-mode))
 
-;; Catppuccin theme
-(load (locate-user-emacs-file "theme.el"))
+;; Emacs theme
+(use-package tokyonight-themes
+  :vc (:url "https://github.com/xuchengpeng/tokyonight-themes")
+  :config (load-theme 'tokyonight-moon :no-confirm))
 
 (use-package company
   :hook (after-init . company-mode))
