@@ -165,11 +165,6 @@
         (phpdoc "https://github.com/claytonrcarter/tree-sitter-phpdoc" "v0.1.6")
         (python "https://github.com/tree-sitter/tree-sitter-python" "v0.25.0")))
 
-;; PHP
-(add-to-list 'auto-mode-alist '("\\.php\\'" . php-ts-mode))
-(add-to-list 'auto-mode-alist '("^artisan$" . php-ts-mode))
-(add-to-list 'auto-mode-alist '("\\.blade\\.php\\'" . web-mode))
-
 ;; Nix
 (use-package nix-ts-mode
   :mode "\\.nix\\'")
@@ -178,4 +173,9 @@
 (add-to-list 'auto-mode-alist '("\\.java\\'" . java-ts-mode))
 
 ;; Web development
-(use-package web-mode)
+(use-package web-mode
+  :config
+  ;; PHP & Laravel
+  (add-to-list 'auto-mode-alist '("\\.php\\'" . php-ts-mode))
+  (add-to-list 'auto-mode-alist '("^artisan$" . php-ts-mode))
+  (add-to-list 'auto-mode-alist '("\\.blade\\.php\\'" . web-mode)))
