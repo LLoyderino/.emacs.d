@@ -25,6 +25,9 @@
         tab-mark))
 (add-hook 'prog-mode-hook 'whitespace-mode)
 
+;; support for use-package on imenu
+(setopt use-package-enable-imenu-support t)
+
 ;; Melpa
 (require 'package)
 (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/") t)
