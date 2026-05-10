@@ -160,7 +160,7 @@
         (java "https://github.com/tree-sitter/tree-sitter-java" "v0.23.5")
         (javascript "https://github.com/tree-sitter/tree-sitter-javascript" "v0.25.0")
         (jsdoc "https://github.com/tree-sitter/tree-sitter-jsdoc" "v0.25.0")
-        (nix "https://github.com/nix-community/tree-sitter-nix" "v0.3.0")
+        (nix "https://github.com/nix-community/tree-sitter-nix" "tree-sitter-0.25")
         (php "https://github.com/tree-sitter/tree-sitter-php" "v0.23.12" "php/src")
         (phpdoc "https://github.com/claytonrcarter/tree-sitter-phpdoc" "v0.1.6")
         (python "https://github.com/tree-sitter/tree-sitter-python" "v0.25.0")))
