@@ -161,6 +161,7 @@
         (java "https://github.com/tree-sitter/tree-sitter-java" "v0.23.5")
         (javascript "https://github.com/tree-sitter/tree-sitter-javascript" "v0.25.0")
         (jsdoc "https://github.com/tree-sitter/tree-sitter-jsdoc" "v0.25.0")
+        (json "https://github.com/tree-sitter/tree-sitter-json")
         (nix "https://github.com/nix-community/tree-sitter-nix" "tree-sitter-0.25")
         (php "https://github.com/tree-sitter/tree-sitter-php" "v0.23.12" "php/src")
         (phpdoc "https://github.com/claytonrcarter/tree-sitter-phpdoc" "v0.1.6")
@@ -169,6 +170,7 @@
 ;; Treesitter languages
 (add-to-list 'auto-mode-alist '("\\.go\\'" . go-ts-mode))
 (add-to-list 'auto-mode-alist '("\\.java\\'" . java-ts-mode))
+(add-to-list 'auto-mode-alist '("\\.json\\'" . json-ts-mode))
 
 ;; Nix
 (use-package nix-ts-mode
