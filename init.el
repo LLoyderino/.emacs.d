@@ -156,6 +156,7 @@
 ;; Treesitter grammars
 (setq treesit-language-source-alist
       '((css "https://github.com/tree-sitter/tree-sitter-css" "v0.23.2")
+        (go "https://github.com/tree-sitter/tree-sitter-go")
         (html "https://github.com/tree-sitter/tree-sitter-html" "v0.23.2")
         (java "https://github.com/tree-sitter/tree-sitter-java" "v0.23.5")
         (javascript "https://github.com/tree-sitter/tree-sitter-javascript" "v0.25.0")
@@ -165,12 +166,13 @@
         (phpdoc "https://github.com/claytonrcarter/tree-sitter-phpdoc" "v0.1.6")
         (python "https://github.com/tree-sitter/tree-sitter-python" "v0.25.0")))
 
+;; Treesitter languages
+(add-to-list 'auto-mode-alist '("\\.go\\'" . go-ts-mode))
+(add-to-list 'auto-mode-alist '("\\.java\\'" . java-ts-mode))
+
 ;; Nix
 (use-package nix-ts-mode
   :mode "\\.nix\\'")
-
-;; Java
-(add-to-list 'auto-mode-alist '("\\.java\\'" . java-ts-mode))
 
 ;; Web development
 (use-package web-mode
