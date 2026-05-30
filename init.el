@@ -120,6 +120,11 @@
   :config
   (org-roam-db-autosync-mode))
 
+;; Newsticker
+(setopt newsticker-url-list
+        '(("Sascha Chua" "https://sachachua.com/blog/category/emacs/feed/index.xml")
+          ("Protesilaos" "https://protesilaos.com/master.xml")))
+
 ;; Emacs theme
 (use-package tokyonight-themes
   :vc (:url "https://github.com/xuchengpeng/tokyonight-themes")
