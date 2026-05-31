@@ -130,6 +130,10 @@
   :vc (:url "https://github.com/xuchengpeng/tokyonight-themes")
   :config (load-theme 'tokyonight-moon :no-confirm))
 
+(set-face-attribute 'variable-pitch nil
+                    :family "DejaVu Serif"
+                    :height 1.1)
+
 (use-package company
   :hook (after-init . company-mode))
 
@@ -153,8 +157,16 @@
   (add-to-list 'auto-mode-alist '("\\.pdf\\'" . pdf-view-mode)))
 
 ;; epub
+(use-package visual-fill-column
+  :config (setopt visual-fill-column-center-text t))
+
 (use-package nov
-  :config (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode)))
+  :after visual-fill-column
+  :hook ((nov-mode . visual-line-mode)
+         (nov-mode . visual-fill-column-mode))
+  :config
+  (setopt nov-text-width 80)
+  (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode)))
 
 ;; Magit
 (use-package magit)
