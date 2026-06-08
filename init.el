@@ -199,6 +199,9 @@
 (add-to-list 'auto-mode-alist '("\\.java\\'" . java-ts-mode))
 (add-to-list 'auto-mode-alist '("\\.json\\'" . json-ts-mode))
 
+;; Zig
+(use-package zig-mode)
+
 ;; Nix
 (use-package nix-ts-mode
   :mode "\\.nix\\'")
