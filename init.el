@@ -170,8 +170,9 @@
   :hook ((nov-mode . visual-line-mode)
          (nov-mode . visual-fill-column-mode))
   :config
-  (setopt nov-text-width 80)
-  (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode)))
+  (setopt nov-text-width 80))
+
+(add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode))
 
 ;; Magit
 (use-package magit)
