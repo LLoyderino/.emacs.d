@@ -128,7 +128,12 @@
 ;; Emacs theme
 (use-package tokyonight-themes
   :vc (:url "https://github.com/xuchengpeng/tokyonight-themes")
-  :config (load-theme 'tokyonight-moon :no-confirm))
+  :config
+  (load-theme 'tokyonight-moon :no-confirm)
+  (tokyonight-themes-with-colors
+    (custom-set-faces
+     `(org-level-1 ((,c :foreground ,red)))
+     `(org-level-6 ((,c :foreground ,fg))))))
 
 (set-face-attribute 'variable-pitch nil
                     :family "DejaVu Serif"
