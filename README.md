@@ -12,15 +12,14 @@ version you might require to install them separately.
 Some examples include:
 
 - flymake
-- project.el
 - treesitter
 - use-package
+- which-key
 
-### External dependencies
+### System dependencies
 
 The following programs need to be installed externally in order for everything to work:
 
 - [Git](https://git-scm.com)
-- [Gnome](https://www.gnome.org/) - (alternatively change `theme.el` to match your DE/WM)
 - [aspell](http://aspell.net/) - (alternatively just use ispell)
 - [epdfinfo server](https://github.com/vedang/pdf-tools?tab=readme-ov-file#installing-the-epdfinfo-server) - Needed to run `pdf-tools`
