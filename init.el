@@ -142,8 +142,19 @@
                     :family "DejaVu Serif"
                     :height 1.1)
 
-(use-package company
-  :hook (after-init . company-mode))
+;; Auto completion
+(use-package corfu
+  :custom
+  (corfu-auto t)
+  :init
+  (global-corfu-mode)
+  (corfu-popupinfo-mode +1)
+  (corfu-history-mode +1))
+
+(use-package cape
+  :init
+  (add-hook 'completion-at-point-functions #'cape-dabbrev)
+  (add-hook 'completion-at-point-functions #'cape-file))
 
 ;; Retro-active completion
 (use-package orderless
