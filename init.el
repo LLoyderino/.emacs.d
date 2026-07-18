@@ -72,6 +72,9 @@
 (delete-selection-mode 1)
 (setq-default fill-column 94)                  ; Fill columns to half of my laptop's screen
 
+;; Duplicate line
+(global-set-key (kbd "C-c d") #'duplicate-dwim)
+
 ;; Spellcheck
 (unless (eq system-type 'windows-nt)
   (setq ispell-program-name "aspell")
